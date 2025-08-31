@@ -662,7 +662,8 @@
             }
             
             .industry-main-content,
-            .industry-main-content.image-right {
+            .industry-main-content.image-right,
+            .tgs-industry-expertise {
                 grid-template-columns: 1fr;
                 gap: 48px;
                 text-align: center;
@@ -678,6 +679,17 @@
             
             .stats-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            /* Mobile layout for "Why Choose TGS for Your Industry?" section */
+            .tgs-industry-expertise > div:first-child {
+                display: flex;
+                justify-content: center;
+            }
+            
+            .tgs-industry-expertise .industry-image {
+                width: 100%;
+                max-width: 500px;
             }
             
             .container {
@@ -1281,7 +1293,7 @@
                 <h2 class="section-title">Why Choose TGS for Your Industry?</h2>
                 <p class="section-subtitle">Our deep understanding of Myanmar's business environment combined with industry-specific expertise delivers superior protection for your sector's unique challenges.</p>
                 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 64px; align-items: start;">
+                <div class="industry-main-content tgs-industry-expertise" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 64px; align-items: start;">
                     <div>
                         <img src="https://lh3.googleusercontent.com/d/1OvDWw4aGxp2nul9-lK-tpgz_6pikuty4" alt="TGS industry experts in strategic planning session" class="industry-image" style="width: 100%; height: auto; border-radius: 12px;">
                     </div>
