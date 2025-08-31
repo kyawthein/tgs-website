@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case Study: Thwarting Night-Time Theft at Wah Wah win livestock farm - How TGS prevented theft through swift CCTV monitoring and coordinated response.">
+    <meta name="keywords" content="TGS Case Study, Security Success Story, Manufacturing Security, CCTV Monitoring, Theft Prevention">
+    <title>Case Study: Thwarting Night-Time Theft – Wah Wah win live stock farm - TGS</title>
+    
+    <!-- Google Fonts Import for Manrope (Headings) and Inter (Body) -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//www.n7interiorsmyanmar.com">
+    
+    <!-- Critical Font Preloading for BystanderSans -->
+    <link rel="preload" href="https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* BystanderSans Custom Font Import - User's Preferred Sources */
+        @font-face {
+            font-family: 'BystanderSans';
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Medium.woff2') format('woff2');
+            font-weight: 500; /* Medium */
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'BystanderSans';
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-SemiBold.woff') format('woff');
+            font-weight: 600; /* SemiBold */
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'BystanderSans';
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff2') format('woff2');
+            font-weight: 700; /* Bold */
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'BystanderSans';
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff2') format('woff2');
+            font-weight: 800; /* Extra Bold mapped to Bold */
+            font-style: normal;
+            font-display: swap;
+        }
+
+        :root {
+            --primary-color: #ffffff;
+            --secondary-color: #f8f9fa;
+            --dark-surface: #0d1117;
+            --accent-color: #0a2b72;
+            --accent-gradient: linear-gradient(135deg, #3b82f6, #0a2b72);
+            --text-primary: #212529;
+            --text-secondary: #6c757d;
+            --text-primary-inverted: #f0f6fc;
+            --text-secondary-inverted: #8b949e;
+            --surface: #ffffff;
+            --border: #dee2e6;
+            --success: #198754;
+            --warning: #dc3545;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--primary-color);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "BystanderSans", "Manrope", "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 56px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .nav-links a.active {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+        
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gradient);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .mobile-nav-toggle .icon-bar {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--text-primary);
+            margin: 5px 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        
+        /* Page Hero Section */
+        .case-study-hero {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            background: var(--secondary-color);
+        }
+        
+        .case-study-hero .container {
+            max-width: 900px;
+        }
+        
+        .case-study-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .case-study-category {
+            background: var(--accent-gradient);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .case-study-date {
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .case-study-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+        
+        .case-study-summary {
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+        
+        .breadcrumb a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .content-section .container {
+            max-width: 900px;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px;
+        }
+        
+        .content-block h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+        
+        .content-block h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--accent-color);
+        }
+        
+        .content-block p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        
+        .content-block ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .content-block li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .content-block li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+        
+        /* Image Gallery */
+        .image-gallery {
+            margin: 60px 0;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 24px;
+        }
+        
+        .gallery-item {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        /* Statistics Section */
+        .stats-section {
+            background: var(--dark-surface);
+            padding: 80px 0;
+            color: var(--text-primary-inverted);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 32px 24px;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: #60a5fa;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            color: var(--text-secondary-inverted);
+            font-weight: 500;
+        }
+        
+        /* Call to Action */
+        .cta-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 64px 48px;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.07);
+        }
+        
+        .cta-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        
+        .cta-description {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        
+        .btn {
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: white;
+            border: none;
+            box-shadow: 0 8px 24px rgba(16, 34, 80, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(16, 34, 80, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-color);
+            border: 2px solid var(--accent-color);
+            margin-left: 16px;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark-surface);
+            border-top: 1px solid #30363d;
+            padding: 48px 0;
+            text-align: center;
+            color: var(--text-secondary-inverted);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-nav-toggle {
+                display: block;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            .case-study-hero {
+                padding-top: 100px;
+                padding-bottom: 40px;
+            }
+            
+            .content-section {
+                padding: 60px 0;
+            }
+            
+            .cta-card {
+                padding: 48px 32px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="home.html" class="logo">
+                    <img src="https://lh3.googleusercontent.com/d/13tz_XE6HQYt8JFaOqlSxHBvSl-w_1Zip" alt="Thitsar Guardian Security Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="service-1.html">Services</a></li>
+                    <li><a href="tgs-industries-page.html">Industries We Serve</a></li>
+                    <li><a href="tgs-about-page.html">About Us</a></li>
+                    <li><a href="tgs-case-studies.html" class="active">Case Studies & Insights</a></li>
+                    <li><a href="tgs-contact.html">Contact Us</a></li>
+                </ul>
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="case-study-hero">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="home.html">Home</a>
+                    <span>›</span>
+                    <a href="tgs-case-studies.html">Case Studies</a>
+                    <span>›</span>
+                    <span>Wah Wah win livestock farm</span>
+                </div>
+                
+                <div class="case-study-meta">
+                    <div class="case-study-category">Manufacturing</div>
+                    <div class="case-study-date">April 25, 2024</div>
+                </div>
+                
+                <h1 class="case-study-title">Thwarting Night-Time Theft – Wah Wah win live stock farm</h1>
+                
+                <p class="case-study-summary">
+                    Late one evening, the TGS CCTV monitoring team observed unusual movement near a warehouse storing high-protein fish feed. The operators, trained to recognize suspicious behavior, immediately dispatched the nearest patrol unit. The patrol arrived within minutes to find individuals attempting to siphon off bags of valuable feed. Because of the swift and coordinated response between the monitoring center and the ground team, the theft was prevented, the perpetrators were apprehended, and a significant financial loss was avoided.
+                </p>
+            </div>
+        </section>
+
+        <section class="image-gallery">
+            <div class="container">
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://lh3.googleusercontent.com/d/1naRtZt9pyEsiYlPZTnMgIuw19ybeMUoC" alt="Wah Wah win livestock farm facility overview">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://lh3.googleusercontent.com/d/1lWoV14q9qiH0VsRExnmTaagcNwafVyj4" alt="Security monitoring setup at the facility">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-block">
+                        <h2>The Challenge</h2>
+                        <p>Wah Wah win livestock farm faced a critical security challenge with their high-value fish feed storage facility. The warehouse contained expensive high-protein fish feed that represented a significant investment and was essential for their livestock operations. Located in a somewhat isolated area, the facility was vulnerable to theft, particularly during nighttime hours when minimal staff were present.</p>
+                        
+                        <p>The farm management needed a comprehensive security solution that could provide 24/7 monitoring and rapid response capabilities to protect their valuable assets from potential theft and unauthorized access.</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h2>TGS Security Solution</h2>
+                        <p>TGS implemented a comprehensive security system combining advanced CCTV monitoring with rapid response capabilities:</p>
+                        
+                        <ul>
+                            <li><strong>24/7 CCTV Monitoring:</strong> Professional monitoring center with trained operators skilled in recognizing suspicious behavior patterns</li>
+                            <li><strong>Strategic Camera Placement:</strong> Optimal positioning to cover all critical areas including warehouse entrances, storage areas, and perimeter access points</li>
+                            <li><strong>Rapid Response Protocol:</strong> Coordinated dispatch system connecting monitoring center directly with mobile patrol units</li>
+                            <li><strong>Real-time Communication:</strong> Instant communication channels between monitoring team and field security personnel</li>
+                            <li><strong>Professional Training:</strong> Specialized training for operators to quickly identify and respond to suspicious activities</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h2>The Incident Response</h2>
+                        <p>On the evening of the incident, TGS's monitoring excellence was put to the test. Our trained CCTV operators detected unusual movement patterns near the warehouse storing the high-protein fish feed. The operators immediately recognized the suspicious nature of the activity and initiated our rapid response protocol.</p>
+                        
+                        <p>Within minutes of detection, the nearest patrol unit was dispatched to the location. The coordinated response was so swift that the patrol team arrived while the perpetrators were still in the process of attempting to steal bags of valuable feed. This immediate intervention not only prevented the theft but also led to the apprehension of the individuals responsible.</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h2>Results & Impact</h2>
+                        <p>The successful intervention demonstrated the effectiveness of TGS's integrated security approach:</p>
+                        
+                        <ul>
+                            <li><strong>Theft Prevention:</strong> Complete prevention of product loss, protecting significant financial investment</li>
+                            <li><strong>Perpetrator Apprehension:</strong> Successful capture of individuals involved in the theft attempt</li>
+                            <li><strong>Rapid Response Time:</strong> Response time measured in minutes, not hours</li>
+                            <li><strong>Coordinated Team Effort:</strong> Seamless communication and coordination between monitoring and field teams</li>
+                            <li><strong>Asset Protection:</strong> Safeguarding of valuable high-protein fish feed inventory</li>
+                            <li><strong>Business Continuity:</strong> Ensuring uninterrupted operations and supply chain protection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Theft Prevention Success</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">&lt;5</span>
+                        <span class="stat-label">Minutes Response Time</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Continuous Monitoring</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Perpetrators Apprehended</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <h2 class="cta-title">Protect Your Assets Like Wah Wah win</h2>
+                    <p class="cta-description">
+                        Experience the same level of professional security monitoring and rapid response that protected Wah Wah win livestock farm. Let TGS safeguard your valuable assets with our proven security solutions.
+                    </p>
+                    <a href="tgs-contact.html" class="btn btn-primary">Get Security Assessment</a>
+                    <a href="tgs-case-studies.html" class="btn btn-secondary">View More Case Studies</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Thitsar Guardian Security Co., Ltd. Your trusted security partner in Myanmar.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.querySelector('.mobile-nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            let lastScrollY = window.scrollY;
+            const header = document.querySelector('.header');
+            
+            window.addEventListener('scroll', () => {
+                const currentScrollY = window.scrollY;
+                
+                if (currentScrollY > 100) {
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                } else {
+                    header.style.background = 'rgba(255, 255, 255, 0.85)';
+                }
+                
+                if (currentScrollY > lastScrollY && currentScrollY > 200) {
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    header.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+            }, { passive: true });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags for SEO and Responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thitsar Guardian Security serves multiple industries in Myanmar with specialized security solutions tailored to sector-specific challenges and requirements.">
+    <meta name="keywords" content="Industries Security Myanmar, Manufacturing Security, Banking Security, Oil Gas Security, Construction Security Myanmar">
+    <title>Industries We Serve - Thitsar Guardian Security</title>
+    
+    <!-- Google Fonts Import for Manrope (Headings) and Inter (Body) -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//www.n7interiorsmyanmar.com">
+    
+    <!-- Critical Font Preloading for BystanderSans -->
+    <link rel="preload" href="https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CSS STYLES --- */
+        /* This section contains all the styling for the website. */
+
+        /* BystanderSans Custom Font Import - User's Preferred Sources */
+        @font-face {
+            font-family: 'BystanderSans';
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Medium.woff2') format('woff2');
+            font-weight: 500; /* Medium */
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'BystanderSans';
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-SemiBold.woff') format('woff');
+            font-weight: 600; /* SemiBold */
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'BystanderSans';
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff2') format('woff2');
+            font-weight: 700; /* Bold */
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'BystanderSans';
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff2') format('woff2');
+            font-weight: 800; /* Extra Bold mapped to Bold */
+            font-style: normal;
+            font-display: swap;
+        }
+
+        :root {
+            /* Brand Color Palette from TGS Brand Guide */
+            --primary-color: #ffffff;
+            --secondary-color: #f8f9fa;
+            --dark-surface: #0d1117;
+            
+            /* UPDATED: Accent colors now use the client's brand color */
+            --accent-color: #0a2b72;
+            --accent-gradient: linear-gradient(135deg, #3b82f6, #102250);
+            
+            /* Text colors for light backgrounds */
+            --text-primary: #212529;
+            --text-secondary: #6c757d;
+
+            /* Text colors for dark backgrounds */
+            --text-primary-inverted: #f0f6fc;
+            --text-secondary-inverted: #8b949e;
+
+            --surface: #ffffff;
+            --border: #dee2e6;
+            --success: #198754;
+            --warning: #dc3545;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--primary-color);
+            overflow-x: hidden;
+        }
+
+        /* Heading fonts using BystanderSans as primary */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "BystanderSans", "Manrope", "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 56px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .nav-links a.active {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+        
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gradient);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .mobile-nav-toggle .icon-bar {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--text-primary);
+            margin: 5px 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        
+        /* Page Hero Section */
+        .page-hero {
+            padding-top: 160px;
+            padding-bottom: 80px;
+            background: var(--secondary-color);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(110deg, #e6f0ff, #f8f9fa 50%, #e6f0ff);
+            animation: gradient-animation 15s ease infinite;
+            z-index: 0;
+        }
+        
+        .page-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page-hero-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        
+        .page-hero-title .gradient-text {
+            background: var(--accent-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .page-hero-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* General Section Styling */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-dark {
+            background: var(--dark-surface);
+            color: var(--text-primary-inverted);
+        }
+        
+        .section-dark .section-title,
+        .section-dark h3,
+        .section-dark h4 {
+            color: var(--text-primary-inverted);
+        }
+        
+        .section-dark p, .section-dark li {
+            color: var(--text-secondary-inverted);
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 64px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .section-dark .section-subtitle {
+            color: var(--text-secondary-inverted);
+        }
+
+        /* Industry Detail Layout */
+        .industry-detail {
+            display: block; /* Changed from grid to block for better control */
+            margin-bottom: 120px;
+        }
+        
+        .industry-detail:last-child {
+            margin-bottom: 0;
+        }
+        
+        .industry-detail.reverse {
+            direction: initial; /* Reset direction for block layout */
+        }
+        
+        .industry-detail.reverse > * {
+            direction: ltr;
+        }
+        
+        /* First row: Title and description */
+        .industry-header {
+            margin-bottom: 48px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+        
+        /* Zig-zag layout: Right-aligned title and description */
+        .industry-header.right-align {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .industry-header.left-align {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        /* Second row: Image and challenges/solutions */
+        .industry-main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+        
+        .industry-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .industry-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .industry-content h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 16px;
+        }
+        
+        .section-dark .industry-content h3 {
+            color: var(--text-primary-inverted);
+        }
+        
+        /* Industry header specific styles */
+        .industry-header h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 16px;
+        }
+        
+        .section-dark .industry-header h3 {
+            color: var(--text-primary-inverted);
+        }
+        
+        .industry-intro {
+            font-size: 16px;
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        
+        .industry-challenges {
+            margin-bottom: 32px;
+        }
+        
+        .industry-challenges h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        
+        .section-dark .industry-challenges h4 {
+            color: var(--text-primary-inverted);
+        }
+        
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        
+        .challenge-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: rgba(10, 43, 114, 0.05);
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .section-dark .challenge-item {
+            background: rgba(96, 165, 250, 0.1);
+        }
+        
+        .challenge-item:hover {
+            transform: translateX(4px);
+            background: rgba(10, 43, 114, 0.1);
+        }
+        
+        .section-dark .challenge-item:hover {
+            background: rgba(96, 165, 250, 0.2);
+        }
+        
+        .challenge-item svg {
+            color: var(--accent-color);
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+        
+        .section-dark .challenge-item svg {
+            color: #60a5fa;
+        }
+        
+        .industry-solutions h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        
+        .section-dark .industry-solutions h4 {
+            color: var(--text-primary-inverted);
+        }
+        
+        .solutions-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .solutions-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 12px;
+            background: rgba(10, 43, 114, 0.05);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .section-dark .solutions-list li {
+            background: rgba(96, 165, 250, 0.1);
+        }
+        
+        .solutions-list li:hover {
+            transform: translateX(4px);
+            color: var(--accent-color);
+            background: rgba(10, 43, 114, 0.1);
+        }
+        
+        .section-dark .solutions-list li:hover {
+            color: #60a5fa;
+            background: rgba(96, 165, 250, 0.2);
+        }
+        
+        .solutions-list svg {
+            color: var(--accent-color);
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+        
+        .section-dark .solutions-list svg {
+            color: #60a5fa;
+        }
+
+        /* Stats Section */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-top: 64px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 32px 24px;
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--accent-color);
+            box-shadow: 0 15px 30px rgba(10, 43, 114, 0.15);
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover .stat-number {
+            transform: scale(1.1);
+            color: #3b82f6;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+        
+        .stat-item:hover .stat-label {
+            color: var(--text-primary);
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: white;
+            border: none;
+            box-shadow: 0 8px 24px rgba(10, 43, 114, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(10, 43, 114, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--border);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--accent-color);
+            border-color: var(--accent-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Contact Section */
+        .contact-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 64px 48px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.07), 0 4px 6px -2px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .contact-card .section-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.2;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark-surface);
+            border-top: 1px solid #30363d;
+            padding: 48px 0;
+            text-align: center;
+            color: var(--text-secondary-inverted);
+        }
+        
+        /* Animations */
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .challenges-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .solutions-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .industry-main-content {
+                grid-template-columns: 1fr;
+                gap: 48px;
+                text-align: center;
+            }
+            
+            .industry-header {
+                text-align: center;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 0 16px;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 70%;
+                height: 100vh;
+                background: var(--primary-color);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                transform: translateX(100%);
+                transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+                border-left: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+            
+            .nav-links a {
+                font-size: 18px;
+            }
+
+            .mobile-nav-toggle {
+                display: block;
+            }
+            .mobile-nav-toggle.active .icon-bar:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+            .mobile-nav-toggle.active .icon-bar:nth-child(2) {
+                opacity: 0;
+            }
+            .mobile-nav-toggle.active .icon-bar:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#home" class="logo">
+                    <img src="https://lh3.googleusercontent.com/d/13tz_XE6HQYt8JFaOqlSxHBvSl-w_1Zip" alt="Thitsar Guardian Security Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="service-1.html">Services</a></li>
+                    <li><a href="#industries" class="active">Industries We Serve</a></li>
+                    <li><a href="tgs-about-page.html">About Us</a></li>
+                    <li><a href="tgs-case-studies.html">Case Studies & Insights</a></li>
+                    <li><a href="tgs-contact.html">Contact Us</a></li>
+                </ul>
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero Section (Light) -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-hero-title"><span class="gradient-text">Secure Your</span><br>Industry's Future</h1>
+                <p class="page-hero-subtitle">We protect what matters most to your business. From banking to manufacturing, our specialized security solutions ensure your operations thrive in Myanmar's dynamic environment.</p>
+            </div>
+        </section>
+
+        <!-- Banking & Finance Section (Light) -->
+        <section class="section">
+            <div class="container">
+                <div class="industry-detail">
+                    <!-- First row: Title and description -->
+                    <div class="industry-header left-align">
+                        <div>
+                            <h3>Banking & Finance</h3>
+                            <p class="industry-intro">Financial institutions require the highest levels of security to protect assets, data, and customer trust. Our solutions combine physical security with advanced cyber protection and regulatory compliance.</p>
+                        </div>
+                        <div></div> <!-- Empty right column -->
+                    </div>
+                    
+                    <!-- Second row: Image and challenges/solutions -->
+                    <div class="industry-main-content">
+                        <img src="https://lh3.googleusercontent.com/d/108waZdTf6tfDAKHsVU4oGSdE4myffjFN" alt="Modern bank branch with advanced security systems" class="industry-image">
+                        <div class="industry-content">
+                            <div class="industry-challenges">
+                                <h4>Key Challenges</h4>
+                                <div class="challenges-grid">
+                                    <div class="challenge-item">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                                        </svg>
+                                        Cyber Fraud & Attacks
+                                    </div>
+                                    <div class="challenge-item">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                        </svg>
+                                        Regulatory Compliance
+                                    </div>
+                                    <div class="challenge-item">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        Cash-in-Transit Security
+                                    </div>
+                                    <div class="challenge-item">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        </svg>
+                                        Identity Fraud Prevention
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="industry-solutions">
+                                <h4>Our Solutions</h4>
+                                <ul class="solutions-list">
+                                    <li>
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Branch & ATM Security Systems
+                                    </li>
+                                    <li>
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Financial Cybersecurity & SOC
+                                    </li>
+                                    <li>
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Executive Protection Services
+                                    </li>
+                                    <li>
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Fraud Investigation & Intelligence
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Energy & Utilities Section (Dark) -->
+        <section class="section section-dark">
+            <div class="container">
+                <div class="industry-detail">
+                    <!-- First row: Title and description -->
+                    <div class="industry-header left-align">
+                        <div>
+                            <h3>Energy & Utilities</h3>
+                            <p class="industry-intro">Critical infrastructure protection is essential for Myanmar's energy sector. We safeguard power generation facilities, transmission networks, and utility operations against both physical and cyber threats.</p>
+                        </div>
+                        <div></div> <!-- Empty right column -->
+                    </div>
+                    
+                    <!-- Second row: Image and challenges/solutions -->
+                    <div class="industry-main-content">
+                        <img src="https://lh3.googleusercontent.com/d/1tzRQwpyTDQBwbmEy2yDy8LmF7gXeJw31" alt="Power generation facility with security infrastructure" class="industry-image">
+                        <div class="industry-content">
+                            <div class="industry-challenges">
+                                <h4>Key Challenges</h4>
+                                <div class="challenges-grid">
+                                    <div class="challenge-item">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                        </svg>
+                                        SCADA System Vulnerabilities
+                                    </div>
+                                    <div class="challenge-item">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                        </svg>
+                                        Infrastructure Sabotage
+                                    </div>
+                                    <div class="challenge-item">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                        </svg>
+                                        Remote Site Security
+                                    </div>
+                                    <div class="challenge-item">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                        </svg>
+                                        Environmental Threats
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="industry-solutions">
+                                <h4>Our Solutions</h4>
+                                <ul class="solutions-list">
+                                    <li>
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Critical Infrastructure Protection
+                                    </li>
+                                    <li>
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Industrial Control System Security
+                                    </li>
+                                    <li>
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Remote Monitoring & Response
+                                    </li>
+                                    <li>
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Emergency Response Planning
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Construction Section (Light) -->
+        <section class="section">
+            <div class="container">
+                <div class="industry-detail">
+                    <!-- First row: Title and description -->
+                    <div class="industry-header left-align">
+                        <div>
+                            <h3>Construction & Development</h3>
+                            <p class="industry-intro">Construction sites face unique security challenges with valuable equipment, materials, and changing site conditions. Our flexible security solutions adapt to project phases and protect your investments.</p>
+                        </div>
+                        <div></div> <!-- Empty right column -->
+                    </div>
+                    
+                    <!-- Second row: Image and challenges/solutions -->
+                    <div class="industry-main-content">
+                        <div class="industry-content">
+                            <div class="industry-challenges">
+                                <h4>Key Challenges</h4>
+                                <div class="challenges-grid">
+                                    <div class="challenge-item">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                                        </svg>
+                                        Equipment & Material Theft
+                                    </div>
+                                    <div class="challenge-item">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                        </svg>
+                                        Unauthorized Access
+                                    </div>
+                                    <div class="challenge-item">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                        </svg>
+                                        Workplace Safety Risks
+                                    </div>
+                                    <div class="challenge-item">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                        </svg>
+                                        Weather & Environmental
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="industry-solutions">
+                                <h4>Our Solutions</h4>
+                                <ul class="solutions-list">
+                                    <li>
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Site Perimeter Security & Access Control
+                                    </li>
+                                    <li>
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Equipment & Material Protection
+                                    </li>
+                                    <li>
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Mobile Patrol & Response Teams
+                                    </li>
+                                    <li>
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Safety Compliance & Risk Management
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop" alt="Construction site with security measures in place" class="industry-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Government & NGO Section (Dark) -->
+        <section class="section section-dark">
+            <div class="container">
+                <div class="industry-detail">
+                    <!-- First row: Title and description -->
+                    <div class="industry-header left-align">
+                        <div>
+                            <h3>Government & NGOs</h3>
+                            <p class="industry-intro">Diplomatic missions, government agencies, and NGOs require specialized security that understands the political landscape while maintaining operational discretion and cultural sensitivity.</p>
+                        </div>
+                        <div></div> <!-- Empty right column -->
+                    </div>
+                    
+                    <!-- Second row: Image and challenges/solutions -->
+                    <div class="industry-main-content">
+                        <img src="https://lh3.googleusercontent.com/d/1fyjfbimYh1kdch_3I2X7M6_NaKZhI9VB" alt="Government building with diplomatic security measures" class="industry-image">
+                        <div class="industry-content">
+                            <div class="industry-challenges">
+                                <h4>Key Challenges</h4>
+                                <div class="challenges-grid">
+                                    <div class="challenge-item">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                        </svg>
+                                        Diplomatic Security Protocols
+                                    </div>
+                                    <div class="challenge-item">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        </svg>
+                                        Political Intelligence
+                                    </div>
+                                    <div class="challenge-item">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                        </svg>
+                                        Public Event Security
+                                    </div>
+                                    <div class="challenge-item">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                        </svg>
+                                        Cultural Sensitivity
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="industry-solutions">
+                                <h4>Our Solutions</h4>
+                                <ul class="solutions-list">
+                                    <li>
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Diplomatic & Executive Protection
+                                    </li>
+                                    <li>
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Political Risk Assessment
+                                    </li>
+                                    <li>
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Secure Event Management
+                                    </li>
+                                    <li>
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        Cultural Liaison Services
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Retail & Commercial Section (Light) -->
+        <section class="section">
+            <div class="container">
+                <div class="industry-detail">
+                    <!-- First row: Title and description -->
+                    <div class="industry-header left-align">
+                        <div>
+                            <h3>Retail & Commercial</h3>
+                            <p class="industry-intro">Shopping centers, commercial properties, and retail businesses need comprehensive security that protects customers, staff, and assets while maintaining a welcoming environment for commerce.</p>
+                        </div>
+                        <div></div> <!-- Empty right column -->
+                    </div>
+                    
+                    <!-- Second row: Image and challenges/solutions -->
+                    <div class="industry-main-content">
+                        <div class="industry-content">
+                        
+                        <div class="industry-challenges">
+                            <h4>Key Challenges</h4>
+                            <div class="challenges-grid">
+                                <div class="challenge-item">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                                    </svg>
+                                    Shoplifting & Theft
+                                </div>
+                                <div class="challenge-item">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                    </svg>
+                                    Customer Safety
+                                </div>
+                                <div class="challenge-item">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    Payment Fraud
+                                </div>
+                                <div class="challenge-item">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                    </svg>
+                                    Emergency Response
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="industry-solutions">
+                            <h4>Our Solutions</h4>
+                            <ul class="solutions-list">
+                                <li>
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    Shopping Center & Mall Security
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    Loss Prevention & Investigation
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    Customer Experience Protection
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    Emergency Evacuation Planning
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                        <img src="https://lh3.googleusercontent.com/d/1mAqhUSFgSZXok8UMaZgyKoDHlkILvYey" alt="Modern shopping center with integrated security systems" class="industry-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Manufacturing Industry Section (Dark) -->
+        <section class="section section-dark">
+            <div class="container">
+                <div class="industry-detail">
+                    <!-- First row: Title and description -->
+                    <div class="industry-header left-align">
+                        <div>
+                            <h3>Manufacturing & Industrial</h3>
+                            <p class="industry-intro">Myanmar's manufacturing sector faces unique security challenges from supply chain vulnerabilities to industrial espionage. Our comprehensive approach protects your facilities, personnel, and intellectual property.</p>
+                        </div>
+                        <div></div> <!-- Empty right column -->
+                    </div>
+                    
+                    <!-- Second row: Image and challenges/solutions -->
+                    <div class="industry-main-content">
+                        <img src="https://lh3.googleusercontent.com/d/1AhQktB_SbKw2MFpgb83w5NYMbXLbMp2O" alt="Modern manufacturing facility with security infrastructure" class="industry-image">
+                        <div class="industry-content">
+                        
+                        <div class="industry-challenges">
+                            <h4>Key Challenges</h4>
+                            <div class="challenges-grid">
+                                <div class="challenge-item">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                    </svg>
+                                    Supply Chain Disruptions
+                                </div>
+                                <div class="challenge-item">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                    Industrial Espionage
+                                </div>
+                                <div class="challenge-item">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                    Equipment Theft
+                                </div>
+                                <div class="challenge-item">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                    </svg>
+                                    Worker Safety
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="industry-solutions">
+                            <h4>Our Solutions</h4>
+                            <ul class="solutions-list">
+                                <li>
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    24/7 Facility & Perimeter Security
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    Supply Chain Protection & Monitoring
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    Industrial Cybersecurity Solutions
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    Employee Background Verification
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry Statistics Section (Light Background) -->
+        <section class="section" style="background: var(--secondary-color);">
+            <div class="container">
+                <h2 class="section-title">Our Industry Impact</h2>
+                <p class="section-subtitle">Protecting Myanmar's key sectors with measurable results and proven expertise</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Protected Facilities</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Key Industries</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Monitoring Coverage</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">99.8%</div>
+                        <div class="stat-label">Incident Response Rate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose TGS for Your Industry Section (Dark) -->
+        <section class="section section-dark">
+            <div class="container">
+                <h2 class="section-title">Why Choose TGS for Your Industry?</h2>
+                <p class="section-subtitle">Our deep understanding of Myanmar's business environment combined with industry-specific expertise delivers superior protection for your sector's unique challenges.</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 64px; align-items: start;">
+                    <div>
+                        <img src="https://lh3.googleusercontent.com/d/1OvDWw4aGxp2nul9-lK-tpgz_6pikuty4" alt="TGS industry experts in strategic planning session" class="industry-image" style="width: 100%; height: auto; border-radius: 12px;">
+                    </div>
+                    <div class="industry-content">
+                        <h3 style="color: white; margin-bottom: 24px;">Industry-Specific Expertise</h3>
+                        <p class="industry-intro" style="margin-bottom: 32px;">Every industry has unique security requirements, regulatory challenges, and operational complexities. Our team includes specialists who understand the specific risks and compliance requirements of each sector we serve.</p>
+                        
+                        <div class="industry-solutions">
+                            <h4>Our Advantages</h4>
+                            <ul class="solutions-list">
+                                <li>
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                    </svg>
+                                    Deep Myanmar Market Knowledge
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                    Intelligence-Led Risk Assessment
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                    </svg>
+                                    Regulatory Compliance Expertise
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                    Rapid Response Capabilities
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                    Integrated Technology Solutions
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                    </svg>
+                                    Transparent Communication & Reporting
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (Light) -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-card">
+                    <h2 class="section-title">Ready to Secure Your Industry?</h2>
+                    <p class="section-subtitle">
+                        Every industry has unique security challenges. Let's discuss how our specialized expertise can protect your operations and support your business objectives in Myanmar.
+                    </p>
+                    <a href="#" class="btn btn-primary">Get Industry-Specific Consultation</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Dark Contrast) -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Thitsar Guardian Security Co., Ltd. Your trusted security partner across Myanmar's industries.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- JAVASCRIPT LOGIC ---
+        // This section contains all the interactivity for the website.
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Navigation Toggle
+            const navToggle = document.querySelector('.mobile-nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Header scroll effect
+            let lastScrollY = window.scrollY;
+            const header = document.querySelector('.header');
+            
+            window.addEventListener('scroll', () => {
+                const currentScrollY = window.scrollY;
+                
+                if (currentScrollY > 100) {
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                } else {
+                    header.style.background = 'rgba(255, 255, 255, 0.85)';
+                }
+                
+                if (currentScrollY > lastScrollY && currentScrollY > 200) {
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    header.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+            }, { passive: true });
+
+            // Enhanced scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const onTransitionEnd = () => {
+                            entry.target.style.transition = '';
+                            entry.target.style.transform = '';
+                            entry.target.style.opacity = '';
+                            entry.target.removeEventListener('transitionend', onTransitionEnd);
+                        };
+                        entry.target.addEventListener('transitionend', onTransitionEnd);
+                        
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Add scroll animations to stat items only
+            document.querySelectorAll('.stat-item').forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(el);
+            });
+
+            // Add enhanced hover effects for industry detail sections
+            document.querySelectorAll('.challenge-item, .solutions-list li').forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    item.style.transform = 'translateX(8px)';
+                });
+                
+                item.addEventListener('mouseleave', () => {
+                    item.style.transform = 'translateX(0)';
+                });
+            });
+
+            // Enhanced hover effects for interactive elements
+            document.querySelectorAll('.stat-item').forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = card.style.transform.replace('translateY(30px)', '') + ' translateY(-8px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = card.style.transform.replace(' translateY(-8px) scale(1.02)', '');
+                });
+            });
+
+            // Add counter animation for stats
+            const animateCounter = (element, target, duration = 2000) => {
+                let start = 0;
+                const increment = target / (duration / 16);
+                const timer = setInterval(() => {
+                    start += increment;
+                    if (start >= target) {
+                        element.textContent = target.toString().includes('.') ? target.toFixed(1) + '%' : target + (target === 150 ? '+' : target === 6 ? '' : target === 24 ? '/7' : '%');
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(start).toString();
+                    }
+                }, 16);
+            };
+
+            // Animate stats when they come into view
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const statNumber = entry.target.querySelector('.stat-number');
+                        const value = statNumber.textContent;
+                        
+                        if (value.includes('150')) {
+                            animateCounter(statNumber, 150);
+                        } else if (value.includes('6')) {
+                            animateCounter(statNumber, 6);
+                        } else if (value.includes('24')) {
+                            animateCounter(statNumber, 24);
+                        } else if (value.includes('99.8')) {
+                            animateCounter(statNumber, 99.8);
+                        }
+                        
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.stat-item').forEach(item => {
+                statsObserver.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
+
