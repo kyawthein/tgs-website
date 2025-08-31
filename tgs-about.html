@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags for SEO and Responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Thitsar Guardian Security - Myanmar's trusted security partner with deep local expertise and international standards.">
+    <meta name="keywords" content="About TGS, Security Company Myanmar, Local Security Expertise, Myanmar Security Solutions">
+    <title>About Us - Thitsar Guardian Security</title>
+    
+    <!-- Google Fonts Import for Manrope (Headings) and Inter (Body) -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//www.n7interiorsmyanmar.com">
+    
+    <!-- Critical Font Preloading for BystanderSans -->
+    <link rel="preload" href="https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CSS STYLES --- */
+        /* This section contains all the styling for the website. */
+
+        /* BystanderSans Custom Font Import - User's Preferred Sources */
+        @font-face {
+            font-family: 'BystanderSans';
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Medium.woff2') format('woff2');
+            font-weight: 500; /* Medium */
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'BystanderSans';
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-SemiBold.woff') format('woff');
+            font-weight: 600; /* SemiBold */
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'BystanderSans';
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff2') format('woff2');
+            font-weight: 700; /* Bold */
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'BystanderSans';
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff2') format('woff2');
+            font-weight: 800; /* Extra Bold mapped to Bold */
+            font-style: normal;
+            font-display: swap;
+        }
+
+        :root {
+            /* Light Theme Color Palette */
+            --primary-color: #ffffff;
+            --secondary-color: #f8f9fa;
+            --dark-surface: #0d1117; /* For contrasting dark sections */
+            
+            /* UPDATED: Accent colors now use the client's brand color */
+            --accent-color: #0a2b72;
+            --accent-gradient: linear-gradient(135deg, #3b82f6, #102250);
+            
+            /* Text colors for light backgrounds */
+            --text-primary: #212529;
+            --text-secondary: #6c757d;
+
+            /* Text colors for dark backgrounds */
+            --text-primary-inverted: #f0f6fc;
+            --text-secondary-inverted: #8b949e;
+
+            --surface: #ffffff;
+            --border: #dee2e6;
+            --success: #198754;
+            --warning: #dc3545;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--primary-color);
+            overflow-x: hidden;
+        }
+
+        /* Heading fonts using BystanderSans as primary */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "BystanderSans", "Manrope", "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 56px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .nav-links a.active {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+        
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gradient);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .mobile-nav-toggle .icon-bar {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--text-primary);
+            margin: 5px 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        
+        /* Page Hero Section */
+        .page-hero {
+            padding-top: 160px;
+            padding-bottom: 80px;
+            background: var(--secondary-color);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(110deg, #e6f0ff, #f8f9fa 50%, #e6f0ff);
+            animation: gradient-animation 15s ease infinite;
+            z-index: 0;
+        }
+        
+        .page-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page-hero-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        
+        .page-hero-title .gradient-text {
+            background: var(--accent-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .page-hero-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* General Section Styling */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-dark {
+            background: var(--dark-surface);
+            color: var(--text-primary-inverted);
+        }
+        
+        .section-dark .section-title,
+        .section-dark h3,
+        .section-dark h4 {
+            color: var(--text-primary-inverted);
+        }
+        
+        .section-dark p, .section-dark li {
+            color: var(--text-secondary-inverted);
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 64px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        /* Story Section */
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+        
+        .story-content h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 16px;
+        }
+        
+        .story-content p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        .story-image {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Enhanced Values Grid with Better Hover Effects */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 64px;
+        }
+
+        .value-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            position: relative;
+        }
+
+        .value-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--accent-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .value-icon svg {
+            width: 32px;
+            height: 32px;
+            color: white;
+        }
+
+        .value-card h4 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary-inverted);
+            position: relative;
+            z-index: 1;
+        }
+
+        .value-card p {
+            color: var(--text-secondary-inverted);
+            font-size: 15px;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Enhanced Team Grid with Better Hover Effects */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .team-member {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .team-member:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(16, 34, 80, 0.15);
+            border-color: var(--accent-color);
+        }
+
+        .team-photo {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover .team-photo {
+            transform: scale(1.05);
+        }
+
+        .team-info {
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover .team-info {
+            transform: translateY(-4px);
+        }
+
+        .team-name {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+
+        .team-member:hover .team-name {
+            color: var(--accent-color);
+        }
+
+        .team-role {
+            font-size: 14px;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover .team-role {
+            color: #3b82f6;
+            transform: translateX(4px);
+        }
+
+        .team-bio {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover .team-bio {
+            color: var(--text-primary);
+        }
+
+
+
+        /* Enhanced Certifications Grid */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            align-items: center;
+        }
+
+        .certification-item {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .certification-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(16, 34, 80, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .certification-item:hover::before {
+            left: 100%;
+        }
+
+        .certification-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--accent-color);
+            box-shadow: 0 15px 30px rgba(16, 34, 80, 0.15);
+        }
+
+        .certification-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin: 0 auto 16px;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .certification-item:hover .certification-logo {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .certification-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        .certification-item:hover .certification-name {
+            color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: white;
+            border: none;
+            box-shadow: 0 8px 24px rgba(16, 34, 80, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(16, 34, 80, 0.4);
+        }
+
+        /* Contact Section */
+        .contact-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 64px 48px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.07), 0 4px 6px -2px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .contact-card .section-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.2;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark-surface);
+            border-top: 1px solid #30363d;
+            padding: 48px 0;
+            text-align: center;
+            color: var(--text-secondary-inverted);
+        }
+        
+        /* Industries Section */
+        .industries-overview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 64px;
+        }
+        
+        .industry-overview-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .industry-overview-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(16, 34, 80, 0.1);
+            border-color: var(--accent-color);
+        }
+        
+        .industry-overview-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 24px;
+            background: var(--accent-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .industry-overview-card:hover .industry-overview-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .industry-overview-icon svg {
+            width: 32px;
+            height: 32px;
+        }
+        
+        .industry-overview-card h4 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+        
+        .industry-overview-card:hover h4 {
+            color: var(--accent-color);
+        }
+        
+        .industry-overview-card p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.5;
+            transition: color 0.3s ease;
+        }
+        
+        .industry-overview-card:hover p {
+            color: var(--text-primary);
+        }
+        
+        /* Animations */
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Process Section Layout */
+        .process-section {
+            background: var(--secondary-color);
+            padding: 100px 0;
+        }
+        
+        .process-section-layout {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 64px;
+            align-items: start;
+        }
+        
+        .process-section-layout .section-title,
+        .process-section-layout .section-subtitle {
+            text-align: left;
+            margin: 0;
+        }
+        
+        .process-section-layout .section-title {
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            align-items: stretch;
+        }
+        
+        .process-step {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            padding: 32px 24px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--accent-color);
+            box-shadow: 0 15px 30px rgba(16, 34, 80, 0.1);
+        }
+        
+        .process-step .step-number {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 24px;
+            background: var(--accent-gradient);
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .process-step:hover .step-number {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .process-step h4 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            flex-grow: 1;
+            line-height: 1.2;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .process-step:hover h4 {
+            color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+        
+        .process-step p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            margin-top: auto;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .process-step:hover p {
+            color: var(--text-primary);
+        }
+        
+        /* TGS Difference Grid */
+        .tgs-difference-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 64px;
+        }
+
+        .tgs-card {
+            background: var(--surface);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .tgs-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .tgs-card-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .tgs-card-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+
+        .tgs-card:hover .tgs-card-title {
+            color: var(--accent-color);
+        }
+
+        .tgs-card-description {
+            font-size: 15px;
+            line-height: 1.5;
+            flex-grow: 1;
+            margin-bottom: 24px;
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+
+        .tgs-card:hover .tgs-card-description {
+            color: var(--text-primary);
+        }
+        
+        /* Leadership Excellence Section */
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+            margin-top: 64px;
+        }
+        
+        .leadership-image-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .leadership-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+        
+        .leadership-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+        }
+        
+        .leadership-badge {
+            background: rgba(16, 34, 80, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .leadership-badge svg {
+            width: 20px;
+            height: 20px;
+            color: #60a5fa;
+        }
+        
+        .leadership-content {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        
+        .leadership-intro {
+            font-size: 18px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            line-height: 1.6;
+        }
+        
+        .leadership-strengths {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .strength-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 20px;
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .strength-item:hover {
+            transform: translateX(8px);
+            border-color: var(--accent-color);
+            box-shadow: 0 8px 20px rgba(16, 34, 80, 0.1);
+        }
+        
+        .strength-icon {
+            background: var(--accent-gradient);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .strength-item:hover .strength-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .strength-icon svg {
+            width: 20px;
+            height: 20px;
+            color: white;
+        }
+        
+        .strength-item h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            transition: color 0.3s ease;
+        }
+        
+        .strength-item:hover h4 {
+            color: var(--accent-color);
+        }
+        
+        .strength-item p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            transition: color 0.3s ease;
+        }
+        
+        .strength-item:hover p {
+            color: var(--text-primary);
+        }
+        
+        /* Trusted Partners Section */
+        .trusted-partners-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-top: 64px;
+            align-items: center;
+        }
+        
+        .partner-item {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            height: 160px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .partner-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--accent-color);
+            box-shadow: 0 15px 30px rgba(16, 34, 80, 0.15);
+        }
+        
+        .partner-logo {
+            max-width: 140px;
+            max-height: 100px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            filter: grayscale(0.3);
+        }
+        
+        .partner-item:hover .partner-logo {
+            transform: scale(1.05);
+            filter: grayscale(0);
+        }
+        
+        .partner-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 12px;
+            opacity: 1;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .partner-item:hover .partner-name {
+            color: var(--accent-color);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .story-grid, .leadership-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+            
+            .leadership-grid {
+                text-align: center;
+            }
+            
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .industries-overview-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .trusted-partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-section-layout {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+            .process-section-layout .section-title,
+            .process-section-layout .section-subtitle {
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .industries-overview-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .trusted-partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 70%;
+                height: 100vh;
+                background: var(--primary-color);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                transform: translateX(100%);
+                transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+                border-left: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+            
+            .nav-links a {
+                font-size: 18px;
+            }
+
+            .mobile-nav-toggle {
+                display: block;
+            }
+            .mobile-nav-toggle.active .icon-bar:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+            .mobile-nav-toggle.active .icon-bar:nth-child(2) {
+                opacity: 0;
+            }
+            .mobile-nav-toggle.active .icon-bar:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <img src="https://lh3.googleusercontent.com/d/13tz_XE6HQYt8JFaOqlSxHBvSl-w_1Zip" alt="Thitsar Guardian Security Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="tgs-industries.html">Industries We Serve</a></li>
+                    <li><a href="#about" class="active">About Us</a></li>
+                    <li><a href="tgs-case-studies.html">Case Studies & Insights</a></li>
+                    <li><a href="tgs-contact.html">Contact Us</a></li>
+                </ul>
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-hero-title"><span class="gradient-text">The Guardian</span><br>Behind Your Growth</h1>
+                <p class="page-hero-subtitle">We are Thitsar Guardian: a team of dedicated security professionals with deep-rooted expertise in Myanmar. Our mission is to provide the trust and protection necessary for your business to thrive in this complex environment.</p>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="section">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-content">
+                        <h3>Our Story</h3>
+                        <p>Founded by security professionals who understand Myanmar's unique challenges, Thitsar Guardian Security emerged from a simple belief: businesses operating in complex environments deserve security partners who truly understand the local landscape.</p>
+                        
+                        <p>Since our establishment, we've built our reputation on delivering reliable, intelligence-led security solutions that go beyond traditional guarding services. Our approach combines deep cultural knowledge with international best practices, ensuring our clients can operate confidently in Myanmar's dynamic environment.</p>
+                        
+                        <p>Today, we protect critical infrastructure, multinational corporations, state-owned enterprises, and local businesses across Myanmar, always guided by our commitment to professionalism, integrity, and results.</p>
+                    </div>
+                    <img src="https://lh3.googleusercontent.com/d/1ZTMxc3MaQ6kmPXHlZMkRGgV4GdGf4q8H" alt="Thitsar Guardian Security team in action" class="story-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Excellence Section -->
+        <section class="section" style="background: var(--secondary-color);">
+            <div class="container">
+                <h2 class="section-title">Leadership Excellence</h2>
+                <p class="section-subtitle">Our strength lies in the diverse, high-level experience of our leadership team.</p>
+                
+                <div class="leadership-grid">
+                    <div class="leadership-image-container">
+                        <img src="https://lh3.googleusercontent.com/d/1uL5aYou66ebojE-AHpd3LIFufDFVWVcJ" alt="TGS Leadership Team" class="leadership-image">
+                        <div class="leadership-overlay">
+                            <div class="leadership-badge">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                </svg>
+                                <span>Proven Leadership</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="leadership-content">
+                        <div class="leadership-strengths">
+                            <div class="strength-item">
+                                <div class="strength-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                    </svg>
+                                </div>
+                                <h4>Veteran Leadership</h4>
+                                <p>Experienced military and security professionals with deep understanding of operational challenges</p>
+                            </div>
+                            
+                            <div class="strength-item">
+                                <div class="strength-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </div>
+                                <h4>Intelligence Background</h4>
+                                <p>Former intelligence professionals bringing analytical expertise and threat assessment capabilities</p>
+                            </div>
+                            
+                            <div class="strength-item">
+                                <div class="strength-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <h4>Cyber Security Landscape</h4>
+                                <p>Technical experts with comprehensive understanding of digital threats and cyber defense strategies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted Partners Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Trusted Partners</h2>
+                <p class="section-subtitle">We are proud to protect businesses across Myanmar, from multinational corporations to local enterprises, all united by their trust in our security expertise.</p>
+                
+                <div class="trusted-partners-grid">
+                    <div class="partner-item">
+                        <img src="https://www.n7interiorsmyanmar.com/images/clients/12-inya-lounge.png" alt="12 Inya Lounge" class="partner-logo">
+                        <div class="partner-name">12 Inya Lounge</div>
+                    </div>
+                    
+                    <div class="partner-item">
+                        <img src="https://www.n7interiorsmyanmar.com/images/clients/mya-ayer-group-of-companies.png" alt="Mya Ayer Factory" class="partner-logo">
+                        <div class="partner-name">Mya Ayer Factory</div>
+                    </div>
+                    
+                    <div class="partner-item">
+                        <img src="https://www.n7interiorsmyanmar.com/images/clients/myanmar-tourism-bank.png" alt="MTB Bank" class="partner-logo">
+                        <div class="partner-name">MTB Bank</div>
+                    </div>
+                    
+                    <div class="partner-item">
+                        <img src="https://www.n7interiorsmyanmar.com/images/clients/ProjectX-KTV.png" alt="ProjectX KTV" class="partner-logo">
+                        <div class="partner-name">ProjectX KTV</div>
+                    </div>
+                    
+                    <div class="partner-item">
+                        <img src="https://www.n7interiorsmyanmar.com/images/clients/IIP-International-School.png" alt="IIP International School" class="partner-logo">
+                        <div class="partner-name">IIP International School</div>
+                    </div>
+                    
+                    <div class="partner-item">
+                        <img src="https://www.n7interiorsmyanmar.com/images/clients/Sandy-Retail-Pharmacy.png" alt="Sandy Retail Pharmacy" class="partner-logo">
+                        <div class="partner-name">Sandy Retail Pharmacy</div>
+                    </div>
+                    
+                    <div class="partner-item">
+                        <img src="https://www.n7interiorsmyanmar.com/images/clients/Dutch-Mill-Myanmar.png" alt="Dutch Mill Factory" class="partner-logo">
+                        <div class="partner-name">Dutch Mill Factory</div>
+                    </div>
+                    
+                    <div class="partner-item">
+                        <img src="https://www.n7interiorsmyanmar.com/images/clients/Pyi-Yadanar-Printing.png" alt="Pyi Yadanar Factory" class="partner-logo">
+                        <div class="partner-name">Pyi Yadanar Factory</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Values Section -->
+        <section class="section section-dark">
+            <div class="container">
+                <h2 class="section-title">Our Core Values</h2>
+                <p class="section-subtitle">The principles that guide everything we do, from daily operations to strategic planning</p>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h4>Reliability</h4>
+                        <p>When you need us, we're there. Our 24/7 commitment means consistent, dependable protection you can count on, day or night.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                        </div>
+                        <h4>Intelligence-Led Approach</h4>
+                        <p>We don't just react – we anticipate. Our proactive intelligence gathering keeps you ahead of potential threats.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                            </svg>
+                        </div>
+                        <h4>Local Expertise</h4>
+                        <p>Deep understanding of Myanmar's cultural, social, and business environment ensures contextually appropriate security solutions.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h4>Rapid Response</h4>
+                        <p>In security situations, every second counts. Our rapid response capabilities ensure immediate action when threats emerge.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h4>Professional Excellence</h4>
+                        <p>Continuous training, international standards, and a commitment to operational excellence in everything we deliver.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                        </div>
+                        <h4>Transparent Communication</h4>
+                        <p>Clear, honest communication builds trust. We keep you informed with regular updates and transparent reporting.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 48px; text-align: center;">
+                    <a href="service-1.html" class="btn btn-primary">Explore Our Services</a>
+                    <p style="margin-top: 16px; color: var(--text-secondary-inverted); font-size: 14px;">See how our values translate into comprehensive security solutions</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries We Serve Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Industries We Protect</h2>
+                <p class="section-subtitle">Specialized security expertise across Myanmar's key sectors, delivering tailored solutions that address unique industry challenges and regulatory requirements.</p>
+                
+                <div class="industries-overview-grid">
+                    <div class="industry-overview-card">
+                        <div class="industry-overview-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h4>Banking & Finance</h4>
+                        <p>Financial institution security, fraud prevention, and regulatory compliance solutions</p>
+                    </div>
+                    
+                    <div class="industry-overview-card">
+                        <div class="industry-overview-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h4>Energy & Utilities</h4>
+                        <p>Critical infrastructure protection and industrial control system security</p>
+                    </div>
+                    
+                    <div class="industry-overview-card">
+                        <div class="industry-overview-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <h4>Construction</h4>
+                        <p>Site security, equipment protection, and workforce safety management</p>
+                    </div>
+                    
+                    <div class="industry-overview-card">
+                        <div class="industry-overview-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <h4>Government & NGOs</h4>
+                        <p>Diplomatic security, public sector protection, and humanitarian mission support</p>
+                    </div>
+                    
+                    <div class="industry-overview-card">
+                        <div class="industry-overview-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                            </svg>
+                        </div>
+                        <h4>Retail & Commercial</h4>
+                        <p>Shopping center security, loss prevention, and customer experience protection</p>
+                    </div>
+                    
+                    <div class="industry-overview-card">
+                        <div class="industry-overview-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                            </svg>
+                        </div>
+                        <h4>Manufacturing</h4>
+                        <p>Industrial facility protection, supply chain security, and operational continuity</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 48px; text-align: center;">
+                    <a href="tgs-industries-page.html" class="btn btn-primary">Explore Industry Solutions</a>
+                    <p style="margin-top: 16px; color: var(--text-secondary); font-size: 14px;">Learn more about our specialized approach for each industry</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Our Process Section -->
+        <section class="process-section">
+            <div class="container">
+                <div class="process-section-layout">
+                    <div>
+                        <h2 class="section-title">Our Partnership Process</h2>
+                        <p class="section-subtitle">A transparent, collaborative approach to building lasting security partnerships that deliver results.</p>
+                    </div>
+                    <div class="process-grid">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h4>Assessment & Understanding</h4>
+                            <p>We begin with a comprehensive evaluation of your current security posture, operational challenges, and business objectives to create a tailored protection strategy.</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h4>Strategic Planning & Design</h4>
+                            <p>Our experts develop an integrated security plan combining physical protection, intelligence analysis, and technical solutions customized to your specific needs.</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h4>Implementation & Partnership</h4>
+                            <p>We deploy our solutions seamlessly while maintaining continuous monitoring, regular reporting, and ongoing optimization to ensure long-term success.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose TGS Section -->
+        <section class="section section-dark">
+            <div class="container">
+                <div class="story-grid">
+                    <img src="https://lh3.googleusercontent.com/d/1OvDWw4aGxp2nul9-lK-tpgz_6pikuty4" alt="TGS team in strategic planning session" class="story-image">
+                    <div class="story-content">
+                        <h3 style="color: white;">Why Choose TGS?</h3>
+                        <p>In Myanmar's complex security landscape, success requires more than standard protection services. It demands partners who understand the nuances of operating in this unique environment.</p>
+                        
+                        <p>Our intelligence-led approach sets us apart. While others react to incidents, we proactively identify and neutralize threats before they impact your operations. This foresight comes from our deep local networks, cultural understanding, and continuous monitoring capabilities.</p>
+                        
+                        <p>We're not just a security provider – we're strategic partners committed to your long-term success in Myanmar. When you choose TGS, you're choosing peace of mind, operational continuity, and a team that truly understands what it takes to succeed here.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-card">
+                    <h2 class="section-title">Ready to Partner with TGS?</h2>
+                    <p class="section-subtitle">
+                        Let's discuss how our intelligence-led security approach can protect your operations and support your business objectives in Myanmar.
+                    </p>
+                    <a href="#" class="btn btn-primary">Schedule a Consultation</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Thitsar Guardian Security Co., Ltd. Your trusted security partner in Myanmar.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- JAVASCRIPT LOGIC ---
+        // This section contains all the interactivity for the website.
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Navigation Toggle
+            const navToggle = document.querySelector('.mobile-nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Header scroll effect
+            let lastScrollY = window.scrollY;
+            const header = document.querySelector('.header');
+            
+            window.addEventListener('scroll', () => {
+                const currentScrollY = window.scrollY;
+                
+                if (currentScrollY > 100) {
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                } else {
+                    header.style.background = 'rgba(255, 255, 255, 0.85)';
+                }
+                
+                if (currentScrollY > lastScrollY && currentScrollY > 200) {
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    header.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+            }, { passive: true });
+
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const onTransitionEnd = () => {
+                            entry.target.style.transition = '';
+                            entry.target.style.transform = '';
+                            entry.target.style.opacity = '';
+                            entry.target.removeEventListener('transitionend', onTransitionEnd);
+                        };
+                        entry.target.addEventListener('transitionend', onTransitionEnd);
+                        
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Add scroll animations to elements
+            document.querySelectorAll('.process-step, .strength-item').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+
+            // Enhanced hover effects for interactive elements
+            document.querySelectorAll('.process-step, .strength-item').forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = card.style.transform.replace('translateY(30px)', '') + ' translateY(-8px)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = card.style.transform.replace(' translateY(-8px)', '');
+                });
+            });
+
+
+        });
+    </script>
+</body>
+</html> 
