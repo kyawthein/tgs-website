@@ -127,7 +127,39 @@
         /* Optimize for slow networks */
         @media (max-width: 768px) {
             .hero {
-                min-height: 80vh; /* Reduce height on mobile for faster loading */
+                min-height: 85vh; /* Slightly taller for better mobile viewing */
+                padding-top: 100px; /* More space for header */
+                padding-bottom: 40px; /* Bottom padding for breathing room */
+            }
+            
+            .hero-title {
+                font-size: clamp(1.8rem, 8vw, 2.5rem); /* Better mobile title sizing */
+                margin-bottom: 20px;
+                line-height: 1.2; /* Improved line height for mobile */
+            }
+            
+            .hero-subtitle {
+                font-size: 16px; /* Slightly smaller for mobile readability */
+                margin-bottom: 28px;
+                line-height: 1.5;
+            }
+            
+            .hero-buttons {
+                flex-direction: column; /* Stack buttons vertically on mobile */
+                gap: 12px;
+                width: 100%;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%; /* Full-width buttons on mobile */
+                padding: 14px 24px; /* Slightly smaller padding */
+                font-size: 15px;
+                justify-content: center;
+            }
+            
+            .hero-image {
+                max-height: 50vh; /* Smaller image on mobile */
+                margin-top: 24px; /* Add top margin for separation */
             }
             
             .service-content-image,
@@ -135,6 +167,12 @@
                 max-width: 100%;
                 height: auto;
                 object-fit: cover;
+            }
+            
+            /* TGS Difference Section - Mobile specific adjustments */
+            .tgs-card-image {
+                height: 250px; /* Slightly reduced height for mobile while still showing hair */
+                object-position: center top; /* Ensure proper positioning on mobile */
             }
         }
 
@@ -157,6 +195,16 @@
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 24px;
+        }
+        
+        /* General Section Styling */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-dark {
+            background: var(--dark-surface);
+            color: var(--text-primary-inverted);
         }
         
         /* Header & Navigation */
@@ -255,7 +303,7 @@
         
         /* Hero Section */
         .hero {
-            padding-top: 80px;
+            padding-top: 120px; /* Increased from 80px for better header separation */
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -530,6 +578,11 @@
             max-height: 250px; /* Restored to original compact size */
         }
         
+        /* Hide mobile descriptions on desktop */
+        .accordion-description {
+            display: none;
+        }
+        
         /* --- Services Tab Section --- */
         .service-tabs {
             display: flex;
@@ -683,8 +736,9 @@
 
         .tgs-card-image {
             width: 100%;
-            height: 220px;
+            height: 270px; /* Increased by 50px to show hair/haircuts */
             object-fit: cover;
+            object-position: center top; /* Position to show head and hair area */
         }
         
         .tgs-card-content {
@@ -1026,21 +1080,125 @@
         @media (max-width: 1024px) {
             .hero-content, .challenge-content, .service-content-grid {
                 grid-template-columns: 1fr;
-                gap: 48px;
+                gap: 40px; /* Reduced gap for tablets */
                 text-align: center;
             }
             .hero-text { text-align: center; }
             .hero-buttons { justify-content: center; }
+            .hero-image {
+                max-height: 55vh; /* Adjusted for tablet */
+            }
             .incidents-grid { grid-template-columns: 1fr; }
-            .accordion-content-inner { grid-template-columns: 1fr; text-align: center; }
-            .accordion-content p { padding: 0 24px; }
-            .accordion-image { max-width: 200px; margin: 0 auto 16px; }
+            .accordion-content-inner { 
+                grid-template-columns: 1fr; 
+                text-align: center; 
+                gap: 16px;
+                padding: 0 20px 20px 20px;
+            }
+            .accordion-content p { 
+                padding: 0 20px;
+                font-size: 14px;
+                line-height: 1.5;
+            }
+            .accordion-image { 
+                max-width: 160px; 
+                margin: 0 auto 12px;
+                border-radius: 8px;
+            }
+            
+            /* Mobile: Show brief descriptions for all accordion items */
+            .accordion {
+                height: auto; /* Remove fixed height on mobile */
+            }
+            
+            .accordion-item {
+                margin-bottom: 12px;
+                border-radius: 12px;
+            }
+            
+            .accordion-header {
+                padding: 16px 20px;
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+                position: relative;
+            }
+            
+            .accordion-title {
+                font-size: 16px !important;
+                margin-bottom: 0;
+                flex-grow: 1;
+            }
+            
+            .accordion-item.active .accordion-title {
+                font-size: 18px !important;
+                color: #60a5fa;
+            }
+            
+            .accordion-toggle-icon {
+                position: relative;
+                top: auto;
+                right: auto;
+                width: 24px;
+                height: 24px;
+                flex-shrink: 0;
+            }
+            
+            /* Hide description text on mobile - show titles only */
+            .accordion-description {
+                display: none; /* Hide descriptions on mobile */
+            }
             .tgs-difference-grid { grid-template-columns: repeat(2, 1fr); }
             .trusted-partners-grid { grid-template-columns: repeat(2, 1fr); }
         }
         
         @media (max-width: 768px) {
-            .container { padding: 0 16px; }
+            .container { 
+                padding: 0 16px; 
+            }
+            
+            /* Reduce section padding for mobile */
+            .section {
+                padding: 60px 0;
+            }
+            
+            /* Mobile Hero Improvements */
+            .hero {
+                min-height: 85vh; /* Slightly taller for better mobile viewing */
+                padding-top: 120px; /* Consistent with desktop for header separation */
+                padding-bottom: 40px; /* Bottom padding for breathing room */
+            }
+            
+            .hero-title {
+                font-size: clamp(1.8rem, 8vw, 2.5rem); /* Better mobile title sizing */
+                margin-bottom: 20px;
+                line-height: 1.2; /* Improved line height for mobile */
+            }
+            
+            .hero-subtitle {
+                font-size: 16px; /* Slightly smaller for mobile readability */
+                margin-bottom: 28px;
+                line-height: 1.5;
+            }
+            
+            .hero-buttons {
+                flex-direction: column; /* Stack buttons vertically on mobile */
+                gap: 12px;
+                width: 100%;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%; /* Full-width buttons on mobile */
+                padding: 14px 24px; /* Slightly smaller padding */
+                font-size: 15px;
+                justify-content: center;
+                min-height: 50px; /* Ensure good touch target size */
+            }
+            
+            .hero-image {
+                max-height: 50vh; /* Smaller image on mobile */
+                margin-top: 24px; /* Add top margin for separation */
+            }
             
             .nav-links {
                 position: fixed;
@@ -1157,6 +1315,7 @@
                         <div class="accordion-item">
                             <div class="accordion-header">
                                 <h4 class="accordion-title">Protect Critical Investments</h4>
+                                <p class="accordion-description">Infrastructure, supply chains, and project sites require specialized protection against theft, sabotage, and operational disruptions.</p>
                                 <div class="accordion-toggle-icon"></div>
                             </div>
                             <div class="accordion-content">
@@ -1169,6 +1328,7 @@
                         <div class="accordion-item">
                             <div class="accordion-header">
                                 <h4 class="accordion-title">Navigate Complexity</h4>
+                                <p class="accordion-description">The social and political landscape is volatile and can change rapidly. Operating successfully demands real-time, localized intelligence.</p>
                                 <div class="accordion-toggle-icon"></div>
                             </div>
                             <div class="accordion-content">
@@ -1181,6 +1341,7 @@
                         <div class="accordion-item">
                             <div class="accordion-header">
                                 <h4 class="accordion-title">Secure Data & Systems</h4>
+                                <p class="accordion-description">Digital infrastructure is a primary target. Businesses face constant cyber threats from sophisticated criminal groups and state-sponsored actors.</p>
                                 <div class="accordion-toggle-icon"></div>
                             </div>
                             <div class="accordion-content">
