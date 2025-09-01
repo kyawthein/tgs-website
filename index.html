@@ -124,69 +124,6 @@
             transform: translateZ(0);
         }
         
-        /* Optimize for slow networks */
-        @media (max-width: 768px) {
-            .hero {
-                min-height: 85vh; /* Slightly taller for better mobile viewing */
-                padding-top: 100px; /* More space for header */
-                padding-bottom: 40px; /* Bottom padding for breathing room */
-            }
-            
-            .hero-title {
-                font-size: clamp(1.8rem, 8vw, 2.5rem); /* Better mobile title sizing */
-                margin-bottom: 20px;
-                line-height: 1.2; /* Improved line height for mobile */
-            }
-            
-            .hero-subtitle {
-                font-size: 16px; /* Slightly smaller for mobile readability */
-                margin-bottom: 28px;
-                line-height: 1.5;
-            }
-            
-            .hero-buttons {
-                flex-direction: column; /* Stack buttons vertically on mobile */
-                gap: 12px;
-                width: 100%;
-            }
-            
-            .hero-buttons .btn {
-                width: 100%; /* Full-width buttons on mobile */
-                padding: 14px 24px; /* Slightly smaller padding */
-                font-size: 15px;
-                justify-content: center;
-            }
-            
-            .hero-image {
-                max-height: 50vh; /* Smaller image on mobile */
-                margin-top: 24px; /* Add top margin for separation */
-            }
-            
-            .service-content-image,
-            .tgs-card-image {
-                max-width: 100%;
-                height: auto;
-                object-fit: cover;
-            }
-            
-            /* TGS Difference Section - Mobile specific adjustments */
-            .tgs-card-image {
-                height: 250px; /* Slightly reduced height for mobile while still showing hair */
-                object-position: center top; /* Ensure proper positioning on mobile */
-            }
-            
-            /* Service Content Grid - Mobile padding optimization for bigger images */
-            .service-content-grid {
-                padding: 24px 16px !important;/* Further reduced from 32px 24px for better mobile image visibility */
-                gap: 32px; /* Further reduced gap for better mobile fit */
-            }
-            
-            /* TGS Card Content - Mobile padding optimization for bigger images */
-            .tgs-card-content {
-                padding: 16px; /* Reduced from 24px for better mobile image visibility */
-            }
-        }
-
         body {
             /* UPDATED: Body font is now Inter */
             font-family: "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
@@ -1093,6 +1030,7 @@
                 grid-template-columns: 1fr;
                 gap: 40px; /* Reduced gap for tablets */
                 text-align: center;
+                padding: 20px 18px;
             }
             .hero-text { text-align: center; }
             .hero-buttons { justify-content: center; }

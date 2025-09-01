@@ -368,6 +368,11 @@
             transition: transform 0.3s ease;
         }
         
+        /* Hide mobile positioned image on desktop */
+        .mobile-image-position {
+            display: none;
+        }
+        
         .industry-image:hover {
             transform: scale(1.02);
         }
@@ -661,6 +666,40 @@
                 padding: 60px 0;
             }
             
+            /* DECREASED PADDING FOR PAGE HERO SECTION */
+            .page-hero {
+                padding-top: 120px;
+                padding-bottom: 60px;
+            }
+            
+            /* DECREASED LINE HEIGHT FOR PAGE HERO TITLES */
+            .page-hero-title {
+                line-height: 1.1;
+            }
+            
+            /* CHANGE FONT SIZE AND LINE HEIGHT FOR PAGE HERO SUBTITLE */
+            .page-hero-subtitle {
+                font-size: 16px;
+                line-height: 1.2;
+            }
+            
+            /* CHANGE LINE HEIGHT FOR SECTION TITLES */
+            .section-title,
+            .section-dark .section-title {
+                line-height: 1.2;
+            }
+            
+            /* CHANGE LINE HEIGHT FOR SECTION SUBTITLES */
+            .section-subtitle {
+                line-height: 1.2;
+            }
+            
+            /* CHANGE LINE HEIGHT FOR DARK SECTION HEADERS */
+            .section-dark h3,
+            .section-dark h4 {
+                line-height: 1.2;
+            }
+            
             .industry-main-content,
             .industry-main-content.image-right,
             .tgs-industry-expertise {
@@ -690,6 +729,32 @@
             .tgs-industry-expertise .industry-image {
                 width: 100%;
                 max-width: 500px;
+            }
+            
+            /* SET HEIGHT OF INDUSTRY IMAGES TO 300PX FOR MOBILE */
+            .industry-image {
+                height: 300px;
+            }
+            
+            /* CHANGE LINE HEIGHT AND REMOVE MARGIN BOTTOM FOR INDUSTRY INTRO */
+            .industry-intro {
+                line-height: 1.2;
+                margin-bottom: 0;
+            }
+            
+            /* Hide desktop image and show mobile positioned image for image-right sections */
+            .industry-main-content.image-right .desktop-image-position {
+                display: none;
+            }
+            
+            .mobile-image-position {
+                display: block;
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 16px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                margin-bottom: 32px;
             }
             
             .container {
@@ -864,9 +929,12 @@
                         <div></div> <!-- Empty right column -->
                     </div>
                     
+                    <!-- Image placed between header and content for mobile layout -->
+                    <img src="https://lh3.googleusercontent.com/d/1tzRQwpyTDQBwbmEy2yDy8LmF7gXeJw31" alt="Power generation facility with security infrastructure" class="industry-image mobile-image-position">
+                    
                     <!-- Second row: Image and challenges/solutions -->
                     <div class="industry-main-content image-right">
-                        <img src="https://lh3.googleusercontent.com/d/1tzRQwpyTDQBwbmEy2yDy8LmF7gXeJw31" alt="Power generation facility with security infrastructure" class="industry-image">
+                        <img src="https://lh3.googleusercontent.com/d/1tzRQwpyTDQBwbmEy2yDy8LmF7gXeJw31" alt="Power generation facility with security infrastructure" class="industry-image desktop-image-position">
                         <div class="industry-content">
                             <div class="industry-challenges">
                                 <h4>Key Challenges</h4>
@@ -1028,9 +1096,12 @@
                         <div></div> <!-- Empty right column -->
                     </div>
                     
+                    <!-- Image placed between header and content for mobile layout -->
+                    <img src="https://lh3.googleusercontent.com/d/1fyjfbimYh1kdch_3I2X7M6_NaKZhI9VB" alt="Government building with diplomatic security measures" class="industry-image mobile-image-position">
+                    
                     <!-- Second row: Image and challenges/solutions -->
                     <div class="industry-main-content image-right">
-                        <img src="https://lh3.googleusercontent.com/d/1fyjfbimYh1kdch_3I2X7M6_NaKZhI9VB" alt="Government building with diplomatic security measures" class="industry-image">
+                        <img src="https://lh3.googleusercontent.com/d/1fyjfbimYh1kdch_3I2X7M6_NaKZhI9VB" alt="Government building with diplomatic security measures" class="industry-image desktop-image-position">
                         <div class="industry-content">
                             <div class="industry-challenges">
                                 <h4>Key Challenges</h4>
@@ -1191,9 +1262,12 @@
                         <div></div> <!-- Empty right column -->
                     </div>
                     
+                    <!-- Image placed between header and content for mobile layout -->
+                    <img src="https://lh3.googleusercontent.com/d/1AhQktB_SbKw2MFpgb83w5NYMbXLbMp2O" alt="Modern manufacturing facility with security infrastructure" class="industry-image mobile-image-position">
+                    
                     <!-- Second row: Image and challenges/solutions -->
                     <div class="industry-main-content image-right">
-                        <img src="https://lh3.googleusercontent.com/d/1AhQktB_SbKw2MFpgb83w5NYMbXLbMp2O" alt="Modern manufacturing facility with security infrastructure" class="industry-image">
+                        <img src="https://lh3.googleusercontent.com/d/1AhQktB_SbKw2MFpgb83w5NYMbXLbMp2O" alt="Modern manufacturing facility with security infrastructure" class="industry-image desktop-image-position">
                         <div class="industry-content">
                         
                         <div class="industry-challenges">
