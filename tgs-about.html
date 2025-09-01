@@ -127,6 +127,11 @@
                 /* Ensure text remains in its original case */
                 text-transform: none !important;
             }
+            
+            /* Use Manrope as fallback for headings on iOS to ensure proper case rendering */
+            h1, h2, h3, h4, h5, h6 {
+                font-family: "Manrope", "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif !important;
+            }
         }
         
         /* Explicitly ensure headings maintain their original case */
@@ -1151,8 +1156,28 @@
             }
             
             .trusted-partners-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
                 gap: 20px;
+            }
+            
+            .partner-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin: 24px 0;
+            }
+            
+            .partner-logo {
+                width: 120px;
+                height: 85px;
+                object-fit: contain;
+                margin-bottom: 10px;
+            }
+            
+            .partner-name {
+                font-size: 13px;
+                margin-top: 10px;
             }
             
             .values-grid {
@@ -1591,7 +1616,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Thitsar Guardian Security Co., Ltd. Your trusted security partner in Myanmar.</p>
+            <p>&copy; <span id="currentYear">2025</span> Thitsar Guardian Security Co., Ltd. Your trusted security partner in Myanmar.</p>
         </div>
     </footer>
 
@@ -1682,9 +1707,23 @@
                     card.style.transform = card.style.transform.replace(' translateY(-8px)', '');
                 });
             });
-
-
+            
+            // iOS Font Fallback Detection
+            // Check if the user is on an iOS device and apply Manrope font as fallback
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+            if (isIOS) {
+                // Apply Manrope font to all headings
+                const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+                headings.forEach(heading => {
+                    heading.style.fontFamily = '"Manrope", "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif';
+                });
+            }
+            
+            // Automatically update the current year in the footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
         });
     </script>
 </body>
+</html> 
+
 </html> 

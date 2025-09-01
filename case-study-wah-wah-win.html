@@ -115,6 +115,16 @@
                 /* Ensure text remains in its original case */
                 text-transform: none !important;
             }
+            
+            /* Use Manrope as fallback for headings on iOS to ensure proper case rendering */
+            h1, h2, h3, h4, h5, h6 {
+                font-family: "Manrope", "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif !important;
+            }
+            
+            /* Use Manrope as fallback for case study category on iOS */
+            .case-study-category {
+                font-family: "Manrope", "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif !important;
+            }
         }
         
         /* Explicitly ensure headings maintain their original case */
@@ -509,6 +519,25 @@
         @media (max-width: 992px) {
             .nav-links {
                 display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 70%;
+                height: 100vh;
+                background: var(--primary-color);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                transform: translateX(100%);
+                transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+                border-left: 1px solid var(--border);
+                z-index: 1000;
+            }
+            
+            .nav-links.active {
+                display: flex;
+                transform: translateX(0);
             }
             
             .mobile-nav-toggle {
@@ -554,6 +583,10 @@
             .stats-grid {
                 grid-template-columns: 1fr;
                 gap: 32px;
+            }
+            
+            .btn-secondary {
+                margin: 16px 0 0 0;
             }
             
             .gallery-grid {
@@ -709,7 +742,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Thitsar Guardian Security Co., Ltd. Your trusted security partner in Myanmar.</p>
+            <p>&copy; <span id="currentYear">2025</span> Thitsar Guardian Security Co., Ltd. Your trusted security partner in Myanmar.</p>
         </div>
     </footer>
 
@@ -750,6 +783,26 @@
                 
                 lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
             }, { passive: true });
+            
+            // iOS Font Fallback Detection
+            // Check if the user is on an iOS device and apply Manrope font as fallback
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+            if (isIOS) {
+                // Apply Manrope font to all headings
+                const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+                headings.forEach(heading => {
+                    heading.style.fontFamily = '"Manrope", "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif';
+                });
+                
+                // Apply Manrope font to case study category
+                const caseStudyCategory = document.querySelector('.case-study-category');
+                if (caseStudyCategory) {
+                    caseStudyCategory.style.fontFamily = '"Manrope", "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif';
+                }
+            }
+            
+            // Automatically update the current year in the footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
         });
     </script>
 </body>

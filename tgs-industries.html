@@ -127,6 +127,11 @@
                 /* Ensure text remains in its original case */
                 text-transform: none !important;
             }
+            
+            /* Use Manrope as fallback for headings on iOS to ensure proper case rendering */
+            h1, h2, h3, h4, h5, h6 {
+                font-family: "Manrope", "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif !important;
+            }
         }
         
         body {
@@ -919,7 +924,7 @@
                                     </div>
                                     <div class="challenge-item">
                                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                                         </svg>
                                         Identity Fraud Prevention
                                     </div>
@@ -1159,7 +1164,7 @@
                                     </div>
                                     <div class="challenge-item">
                                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
                                         </svg>
                                         Political Intelligence
                                     </div>
@@ -1483,7 +1488,7 @@
     <!-- Footer (Dark Contrast) -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Thitsar Guardian Security Co., Ltd. Your trusted security partner across Myanmar's industries.</p>
+            <p>&copy; <span id="currentYear">2025</span> Thitsar Guardian Security Co., Ltd. Your trusted security partner across Myanmar's industries.</p>
         </div>
     </footer>
 
@@ -1626,6 +1631,26 @@
             document.querySelectorAll('.stat-item').forEach(item => {
                 statsObserver.observe(item);
             });
+            
+            // iOS Font Fallback Detection
+            // Check if the user is on an iOS device and apply Manrope font as fallback
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+            if (isIOS) {
+                // Apply Manrope font to all headings
+                const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+                headings.forEach(heading => {
+                    heading.style.fontFamily = '"Manrope", "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif';
+                });
+                
+                // Apply Manrope font to stat labels if they exist
+                const statLabels = document.querySelectorAll('.stat-label');
+                statLabels.forEach(label => {
+                    label.style.fontFamily = '"Manrope", "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif';
+                });
+            }
+            
+            // Automatically update the current year in the footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
         });
     </script>
 </body>

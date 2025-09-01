@@ -113,6 +113,11 @@
                 /* Ensure text remains in its original case */
                 text-transform: none !important;
             }
+            
+            /* Use Manrope as fallback for headings on iOS to ensure proper case rendering */
+            h1, h2, h3, h4, h5, h6 {
+                font-family: "Manrope", "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif !important;
+            }
         }
         
         /* Explicitly ensure headings maintain their original case */
@@ -743,7 +748,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Thitsar Guardian Security Co., Ltd. Your trusted security partner in Myanmar.</p>
+            <p>&copy; <span id="currentYear">2025</span> Thitsar Guardian Security Co., Ltd. Your trusted security partner in Myanmar.</p>
         </div>
     </footer>
 
@@ -792,6 +797,20 @@
                 // Add form submission logic here
                 alert('Thank you for your message! We will get back to you within 24 hours.');
             });
+            
+            // iOS Font Fallback Detection
+            // Check if the user is on an iOS device and apply Manrope font as fallback
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+            if (isIOS) {
+                // Apply Manrope font to all headings
+                const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+                headings.forEach(heading => {
+                    heading.style.fontFamily = '"Manrope", "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif';
+                });
+            }
+            
+            // Automatically update the current year in the footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
         });
     </script>
 </body>
