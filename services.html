@@ -28,7 +28,8 @@
         /* BystanderSans Custom Font Import - User's Preferred Sources */
         @font-face {
             font-family: 'BystanderSans';
-            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Medium.woff2') format('woff2');
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Medium.woff2') format('woff2'),
+            url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Medium.woff') format('woff');
             font-weight: 500; /* Medium */
             font-style: normal;
             font-display: swap;
@@ -36,7 +37,8 @@
 
         @font-face {
             font-family: 'BystanderSans';
-            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-SemiBold.woff') format('woff');
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-SemiBold.woff2') format('woff2'),
+            url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-SemiBold.woff') format('woff');
             font-weight: 600; /* SemiBold */
             font-style: normal;
             font-display: swap;
@@ -44,7 +46,8 @@
 
         @font-face {
             font-family: 'BystanderSans';
-            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff2') format('woff2');
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff2') format('woff2'),
+            url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff') format('woff');
             font-weight: 700; /* Bold */
             font-style: normal;
             font-display: swap;
@@ -52,7 +55,8 @@
         
         @font-face {
             font-family: 'BystanderSans';
-            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff2') format('woff2');
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff2') format('woff2'),
+            url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff') format('woff');
             font-weight: 800; /* Extra Bold mapped to Bold */
             font-style: normal;
             font-display: swap;
@@ -90,6 +94,9 @@
         
         html {
             scroll-behavior: smooth;
+            /* FIXED: Better iOS font rendering */
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
         }
 
         body {
@@ -100,9 +107,15 @@
             overflow-x: hidden;
         }
 
-        /* Heading fonts using BystanderSans as primary */
+        /* FIXED: Improved heading fonts with better iOS support */
         h1, h2, h3, h4, h5, h6 {
-            font-family: "BystanderSans", "Manrope", "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            font-family: "BystanderSans", "Manrope", "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+            /* ADDED: Better iOS font rendering for headings */
+            -webkit-font-smoothing: antialiased;
+            font-weight: 700;
+            /* FIXED: Prevent iOS from auto-adjusting font sizes */
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
         }
         
         .container {
@@ -758,6 +771,7 @@
             
             .service-detail-image {
                 order: -1;
+                height: 300px;
             }
             
             /* Security Solution Cards - Mobile padding optimization for bigger images */
