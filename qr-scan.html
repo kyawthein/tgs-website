@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QR Code Examples for Thitsar Guardian Security - Scan to visit our website">
+    <meta name="keywords" content="QR Code, TGS, Thitsar Guardian, Security Myanmar, Scan QR">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>QR Code Examples - Thitsar Guardian Security</title>
+    
+    <!-- Google Fonts Import for Manrope (Headings) and Inter (Body) -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//www.n7interiorsmyanmar.com">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* BystanderSans Custom Font Import - User's Preferred Sources */
+        @font-face {
+            font-family: 'BystanderSans';
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Medium.woff2') format('woff2'),
+            url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Medium.woff') format('woff');
+            font-weight: 500; /* Medium */
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'BystanderSans';
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-SemiBold.woff2') format('woff2'),
+            url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-SemiBold.woff') format('woff');
+            font-weight: 600; /* SemiBold */
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'BystanderSans';
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff2') format('woff2'),
+            url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff') format('woff');
+            font-weight: 700; /* Bold */
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'BystanderSans';
+            src: url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff2') format('woff2'),
+            url('https://www.n7interiorsmyanmar.com/fonts/BystanderSans-Bold.woff') format('woff');
+            font-weight: 800; /* Extra Bold mapped to Bold */
+            font-style: normal;
+            font-display: swap;
+        }
+
+        :root {
+            /* Light Theme Color Palette */
+            --primary-color: #ffffff;
+            --secondary-color: #f8f9fa;
+            --dark-surface: #0d1117; /* For contrasting dark sections */
+            
+            /* UPDATED: Accent colors now use the client's brand color */
+            --accent-color: #0a2b72;
+            --accent-gradient: linear-gradient(135deg, #3b82f6, #102250);
+            
+            /* Text colors for light backgrounds */
+            --text-primary: #212529;
+            --text-secondary: #6c757d;
+
+            /* Text colors for dark backgrounds */
+            --text-primary-inverted: #f0f6fc;
+            --text-secondary-inverted: #8b949e;
+
+            --surface: #ffffff;
+            --border: #dee2e6;
+            --success: #198754;
+            --warning: #dc3545;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            /* FIXED: Better iOS font rendering */
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
+        /* Performance Optimizations for Myanmar Network Conditions */
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            /* Ensure text remains in its original case */
+            text-transform: none !important;
+        }
+        
+        /* iOS Specific Font Optimizations */
+        @supports (-webkit-touch-callout: none) {
+            * {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                text-rendering: optimizeLegibility;
+                /* Ensure text remains in its original case */
+                text-transform: none !important;
+            }
+            
+            body {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                text-rendering: optimizeLegibility;
+                /* Ensure text remains in its original case */
+                text-transform: none !important;
+            }
+            
+            /* Use Manrope as fallback for headings on iOS to ensure proper case rendering */
+            h1, h2, h3, h4, h5, h6 {
+                font-family: "Manrope", "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif !important;
+            }
+        }
+        
+        /* Explicitly ensure headings maintain their original case */
+        h1, h2, h3, h4, h5, h6 {
+            text-transform: none !important;
+        }
+        
+        /* Ensure buttons and links maintain their original case */
+        button, a, .btn {
+            text-transform: none !important;
+        }
+        
+        body {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--primary-color);
+            overflow-x: hidden;
+        }
+
+        /* FIXED: Improved heading fonts with better iOS support */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "BystanderSans", "Manrope", "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+            /* ADDED: Better iOS font rendering for headings */
+            -webkit-font-smoothing: antialiased;
+            font-weight: 700;
+            /* FIXED: Prevent iOS from auto-adjusting font sizes */
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 56px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .nav-links a.active {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+        
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gradient);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .mobile-nav-toggle .icon-bar {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--text-primary);
+            margin: 5px 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        
+        /* Page Hero Section */
+        .page-hero {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            background: var(--secondary-color);
+            text-align: center;
+        }
+        
+        .page-hero-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+        
+        .page-hero-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+        
+        /* QR Section */
+        .qr-section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 64px;
+            line-height: 1.7;
+            text-align: center;
+        }
+        
+        .qr-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 48px;
+            margin-top: 48px;
+        }
+        
+        .qr-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .qr-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .qr-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        
+        .qr-card p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+        
+        .qr-image {
+            margin: 0 auto 24px;
+            display: block;
+            width: 250px;
+            height: 250px;
+        }
+        
+        /* Larger QR codes for Row 2 */
+        .qr-grid:last-child .qr-image {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .qr-image img {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        
+        .scan-instruction {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 16px;
+            font-style: italic;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark-surface);
+            border-top: 1px solid #30363d;
+            padding: 48px 0;
+            text-align: center;
+            color: var(--text-secondary-inverted);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 70%;
+                height: 100vh;
+                background: var(--primary-color);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                transform: translateX(100%);
+                transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+                border-left: 1px solid var(--border);
+                z-index: 1000;
+            }
+            
+            .nav-links.active {
+                display: flex;
+                transform: translateX(0);
+            }
+            
+            .nav-links a {
+                font-size: 18px;
+            }
+            
+            .mobile-nav-toggle {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            .page-hero {
+                padding-top: 120px;
+                padding-bottom: 40px;
+            }
+            
+            .qr-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            
+            .qr-card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <img src="https://lh3.googleusercontent.com/d/13tz_XE6HQYt8JFaOqlSxHBvSl-w_1Zip" alt="Thitsar Guardian Security Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="tgs-industries.html">Industries We Serve</a></li>
+                    <li><a href="tgs-about.html">About Us</a></li>
+                    <li><a href="tgs-case-studies.html">Case Studies & Insights</a></li>
+                    <li><a href="tgs-contact.html">Contact Us</a></li>
+                </ul>
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-hero-title">QR Code <span class="gradient-text">Examples</span></h1>
+                <p class="page-hero-subtitle">Compare different QR code styles for your marketing materials. All codes link to the Thitsar Guardian Security website.</p>
+            </div>
+        </section>
+
+        <section class="qr-section">
+            <div class="container">
+                <h2 class="section-title">QR Code Variations</h2>
+                <p class="section-subtitle">Choose the style that best fits your brand identity and marketing materials</p>
+                
+                <div class="qr-grid">
+                    <div class="qr-card">
+                        <h3>Standard Black QR</h3>
+                        <p>Traditional black and white QR code with maximum scanning reliability</p>
+                        <div class="qr-image">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://thitsarguardian.com" alt="Standard QR Code" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUwIiBoZWlnaHQ9IjI1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjUwIiBoZWlnaHQ9IjI1MCIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik01MCA1MGg1MHY1MGgtNTB6IiBmaWxsPSIjMDAwIi8+PHBhdGggZD0iTTEwMCA1MGg1MHY1MGgtNTB6IiBmaWxsPSIjMDAwIi8+PHBhdGggZD0iTTUwIDEwMGg1MHY1MGgtNTB6IiBmaWxsPSIjMDAwIi8+PHBhdGggZD0iTTEwMCAxMDBoNTB2NTBoLTUweiIgZmlsbD0iIzAwMCIvPjx0ZXh0IHg9IjEyNSIgeT0iMTI1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiMwMDAiPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+';">
+                        </div>
+                        <p class="scan-instruction">Most universally compatible option</p>
+                    </div>
+                    
+                    <div class="qr-card">
+                        <h3>Brand Color QR</h3>
+                        <p>QR code using your brand colors for better visual consistency</p>
+                        <div class="qr-image">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://thitsarguardian.com&color=0A2B72&bgcolor=FFFFFF" alt="Brand Color QR Code" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUwIiBoZWlnaHQ9IjI1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjUwIiBoZWlnaHQ9IjI1MCIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik01MCA1MGg1MHY1MGgtNTB6IiBmaWxsPSIjMGEyYjc yIi8+PHBhdGggZD0iTTEwMCA1MGg1MHY1MGgtNTB6IiBmaWxsPSIjMGEyYjc yIi8+PHBhdGggZD0iTTUwIDEwMGg1MHY1MGgtNTB6IiBmaWxsPSIjMGEyYjc yIi8+PHBhdGggZD0iTTEwMCAxMDBoNTB2NTBoLTUweiIgZmlsbD0iIzBhMmI3MiIvPjx0ZXh0IHg9IjEyNSIgeT0iMTI1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiMwYTJiNzIiPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+';">
+                        </div>
+                        <p class="scan-instruction">Matches your brand identity</p>
+                    </div>
+                </div>
+                
+                <div class="qr-grid">
+                    <div class="qr-card">
+                        <h3>Brand with Logo</h3>
+                        <p>Custom QR code with your logo embedded for premium appearance</p>
+                        <div class="qr-image">
+                            <img src="https://lh3.googleusercontent.com/d/1bYqEnZiSKex7ibwLSZBRoqlUvQgUfpz4" alt="Brand QR Code with Logo" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUwIiBoZWlnaHQ9IjI1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjUwIiBoZWlnaHQ9IjI1MCIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9Ijg3LjUiIHk9Ijg3LjUiIHdpZHRoPSI3NSIgaGVpZ2h0PSI3NSIgZmlsbD0iI2RkZCIvPjx0ZXh0IHg9IjEyNSIgeT0iMTI1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM2NjYiPlFSIE5vdCBGb3VuZDwvdGV4dD48L3N2Zz4='">
+                        </div>
+                        <p class="scan-instruction">Premium branded QR code with logo</p>
+                    </div>
+                    
+                    <div class="qr-card">
+                        <h3>Brand with Logo Design</h3>
+                        <p>Alternative premium QR code with logo integration</p>
+                        <div class="qr-image">
+                            <img src="https://lh3.googleusercontent.com/d/1KzYZa2v_UU2Qz_IeCklkVtVtxUSkf-6f" alt="Brand QR Code with Logo Design" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUwIiBoZWlnaHQ9IjI1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjUwIiBoZWlnaHQ9IjI1MCIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9Ijg3LjUiIHk9Ijg3LjUiIHdpZHRoPSI3NSIgaGVpZ2h0PSI3NSIgZmlsbD0iI2RkZCIvPjx0ZXh0IHg9IjEyNSIgeT0iMTI1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM2NjYiPlFSIE5vdCBGb3VuZDwvdGV4dD48L3N2Zz4='">
+                        </div>
+                        <p class="scan-instruction">Alternative branded QR design</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear">2025</span> Thitsar Guardian Security Co., Ltd. Your trusted security partner in Myanmar.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.querySelector('.mobile-nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            let lastScrollY = window.scrollY;
+            const header = document.querySelector('.header');
+            
+            window.addEventListener('scroll', () => {
+                const currentScrollY = window.scrollY;
+                
+                if (currentScrollY > 100) {
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                } else {
+                    header.style.background = 'rgba(255, 255, 255, 0.85)';
+                }
+                
+                if (currentScrollY > lastScrollY && currentScrollY > 200) {
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    header.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+            }, { passive: true });
+            
+            // Automatically update the current year in the footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
